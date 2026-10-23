@@ -3,45 +3,50 @@
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <sys/socket.h>
 
 int main()
 {
-    int s, c;
+    int s, c, n;
     char buffer[1024] = {0};
     struct sockaddr_in server, client;
     socklen_t len = sizeof(client);
 
-    // 1. Create TCP socket
     s = socket(AF_INET, SOCK_STREAM, 0);
 
-    // 2. Prepare server address
     server.sin_family = AF_INET;
     server.sin_port = htons(8080);
     server.sin_addr.s_addr = INADDR_ANY;
 
-    // 3. Bind socket
     bind(s, (struct sockaddr *)&server, sizeof(server));
-
-    // 4. Listen for connections
     listen(s, 5);
+
     printf("TCP server waiting...\n");
 
-    // 5. Accept client connection
     c = accept(s, (struct sockaddr *)&client, &len);
 
-    // 6. Receive message
-    int n = recv(c, buffer, sizeof(buffer) - 1, 0);
+    while (1)
+    {
+        // 1. Receive message
+        n = recv(c, buffer, sizeof(buffer) - 1, 0);
 
-    if (n > 0) {
+        // 2. Check connection
+        if (n <= 0)
+            break;
+
+        // 3. Terminate the string
         buffer[n] = '\0';
+
         printf("Client: %s\n", buffer);
 
-        // 7. Send reply
-        send(c, "Hello from server", 17, 0);
+        // 4. Check stop condition
+        if (strcmp(buffer, "stop") == 0)
+            break;
+
+        // 5. Send reply
+        strcpy(buffer, "Hello from server");
+        send(c, buffer, strlen(buffer), 0);
     }
 
-    // 8. Close sockets
     close(c);
     close(s);
 

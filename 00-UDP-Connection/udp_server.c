@@ -3,42 +3,50 @@
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <sys/socket.h>
 
 int main()
 {
-    int s;
+    int s, n;
     char buffer[1024] = {0};
     struct sockaddr_in server, client;
     socklen_t len = sizeof(client);
 
-    // 1. Create UDP socket
     s = socket(AF_INET, SOCK_DGRAM, 0);
 
-    // 2. Prepare server address
     server.sin_family = AF_INET;
     server.sin_port = htons(8080);
     server.sin_addr.s_addr = INADDR_ANY;
 
-    // 3. Bind socket
     bind(s, (struct sockaddr *)&server, sizeof(server));
 
     printf("UDP server waiting...\n");
 
-    // 4. Receive datagram
-    int n = recvfrom(s, buffer, sizeof(buffer) - 1, 0,
+    while (1)
+    {
+        // 1. Receive message
+        n = recvfrom(s, buffer, sizeof(buffer) - 1, 0,
                      (struct sockaddr *)&client, &len);
 
-    if (n >= 0) {
+        // 2. Check receive result
+        if (n < 0)
+            break;
+
+        // 3. Terminate the string
         buffer[n] = '\0';
+
         printf("Client: %s\n", buffer);
 
-        // 5. Send reply
-        sendto(s, "Hello from server", 17, 0,
+        // 4. Check stop condition
+        if (strcmp(buffer, "stop") == 0)
+            break;
+
+        // 5. Prepare and send reply
+        strcpy(buffer, "Hello from server");
+
+        sendto(s, buffer, strlen(buffer), 0,
                (struct sockaddr *)&client, len);
     }
 
-    // 6. Close socket
     close(s);
 
     return 0;
