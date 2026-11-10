@@ -1,0 +1,8 @@
+Implement a simple FTP client-server program with the following functionality:
+
+- The client reads two file names and sends them to the server. Each file
+  contains a matrix.
+- The server reads each file, adds the two matrices, and writes the resultant
+  matrix to a file named "matrix.txt".
+- The server sends the file that contains the result to the client.
+- The client opens and displays the result.

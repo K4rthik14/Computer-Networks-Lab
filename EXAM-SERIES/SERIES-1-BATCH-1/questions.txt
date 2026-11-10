@@ -1,0 +1,27 @@
+    1. Implement a simple UDP client-server program.
+    •  A client sends a message to the server.
+    • Server finds the number of occurrences of a particular substring(eg:- client sends “banana” to the server, server reads a substring “na” from terminal. Server finds the occurrences of “na” as k=2).
+    • The server sends a reply to the client k times, where k is the number of occurrences of a particular substring. For example, since k = 2, the replies sent to the client are: “na occurred 2 times”, “na occurred 2 times”.
+
+    2. Implement a multi-user chat server using TCP with one server and two clients.
+    • The first client sends a number to the server.
+    • The server calculates the sum of the digits of the received number and sends the result to the second client.
+    • The second client checks whether the number received from the server is prime or not.
+    • The second client then sends a reply to the server as either “prime” or “not prime”.
+
+    3.  Create a UDP client server program where the client reads a limit ‘n’ and sends it to the server. Server prints the following pattern up to the limit.
+ 1
+                           1 2 1
+                        1 2 4 2 1
+                     1 2 4 8 4 2 1
+
+
+    4. Write a multi-client chat server program using TCP with the following functionality: Two clients (Client 1 and Client 2) connect to the server. Each client sends a number to the server. The server receives messages from both clients.IIt reverses each number. The server then sends Client 1’s reversed number to Client 2, and Client 2’s reversed number to Client 1 as replies.
+
+    5. Implement a UDP client server program where the client reads 2 matrices and sends it to the server. Server finds product of the matrices. Sort the resultant matrix elements and send it back to the client.
+
+
+6. Implement a simple TCP client-server program.
+    • A client sends a message to the server and the server finds the length of the message received(without using builtin function).
+    • If the length is an odd number, send an “odd” message to the client, else send an “even” message.
+    • On the client side if the message received is “odd” then replace all the a’s by b’s in the message.

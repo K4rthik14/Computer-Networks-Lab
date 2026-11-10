@@ -1,0 +1,8 @@
+Write a multi-client chat server program using TCP with the following
+functionality:
+
+- Two clients (Client 1 and Client 2) connect to the server.
+- Each client sends a number to the server.
+- The server receives messages from both clients and reverses each number.
+- The server sends Client 1's reversed number to Client 2 and Client 2's
+  reversed number to Client 1 as replies.

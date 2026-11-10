@@ -1,0 +1,9 @@
+Implement a multi-user chat server using TCP with one server and two clients.
+
+- The first client sends a number to the server.
+- The server calculates the sum of the digits of the received number and sends
+  the result to the second client.
+- The second client checks whether the number received from the server is prime
+  or not.
+- The second client then sends a reply to the server as either "prime" or
+  "not prime".

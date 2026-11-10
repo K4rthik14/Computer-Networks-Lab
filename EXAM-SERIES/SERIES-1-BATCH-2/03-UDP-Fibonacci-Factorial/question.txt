@@ -1,0 +1,8 @@
+Implement a simple UDP client-server program.
+
+- A client sends a message to the server, and the server replies to the client.
+- The client prints the Fibonacci series if the length of the replied message is
+  odd (e.g. if the length is 5, print the first 5 Fibonacci numbers).
+- The client prints the factorial if the length of the replied message is even
+  (e.g. if the length is 6, print the factorial of 6).
+- Repeat the same until the client sends an "exit" message to the server.

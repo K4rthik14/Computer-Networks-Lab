@@ -1,0 +1,43 @@
+1.​ Implement a simple UDP client-server program.
+●​ A client sends a message to the server, server counts the number of consonants from the message.
+●​ If the count is a prime number, send a concurrent date and time to the client. If it is not prime, then send a
+“sorry” to the client.
+2.​ Implement a simple TCP client-server program.
+●​ A client sends a message to the server and the server finds the length of the message received.
+●​ If the length is an odd number, reverse the message and send it to the client, If the length is an even
+number just send the length to the client.
+●​ Repeat the same until the client sends a stop message to the server.
+3.​ Implement a simple UDP client-server program.
+●​ A client sends a message to the server, and the server replies back to the client.
+●​ Client prints the fibonacci series if the length of the replied message is odd(eg:-If the length of message is
+5 then print first 5 fibonacci numbers).
+●​ Client prints the factorial if the length of the replied message is even(eg:- if length of message is 6 then
+print factorial of 6).
+●​ Repeat the same until the client sends an “exit” message to the server.
+4.​ Implement a simple TCP client-server program with the following functionalities:
+●​ The client sends two matrices to the server.
+●​ The server adds the two matrices and computes the resultant matrix.
+●​ The server identifies the largest element in the resultant matrix.
+●​ The server should send both the resultant matrix and the largest element back to the client.
+5. . Implement a UDP client-server program with the following functionalities:
+●​
+●​
+●​
+●​
+●​
+●​
+The client should read a set of numbers and send them to the server using UDP.
+The server should receive the numbers, sort them in ascending order, and display the sorted numbers.
+The server should identify the second-largest number from the set and send it back to the client.
+The client should receive the second-largest number and check whether it is a palindrome or not.
+The client should display the appropriate result based on the palindrome check.
+6. Implement a multi-client chat server program using TCP with the following functionalities:
+●​
+●​
+●​
+●​
+Client 1 should send an integer to the server.
+The server should receive the number and check whether it is an Armstrong number or not.
+If the number is an Armstrong number, the server should send the message "Armstrong" to Client 2.
+If the number is not an Armstrong number, the server should send the message "Not Armstrong" to
+Client 1.

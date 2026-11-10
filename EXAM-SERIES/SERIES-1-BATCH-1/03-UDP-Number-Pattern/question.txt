@@ -1,0 +1,7 @@
+Create a UDP client-server program where the client reads a limit n and sends
+it to the server. The server prints the following pattern up to the limit:
+
+            1
+          1 2 1
+        1 2 4 2 1
+      1 2 4 8 4 2 1

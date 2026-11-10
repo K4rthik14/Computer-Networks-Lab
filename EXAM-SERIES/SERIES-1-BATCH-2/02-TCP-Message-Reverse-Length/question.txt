@@ -1,0 +1,7 @@
+Implement a simple TCP client-server program.
+
+- A client sends a message to the server, and the server finds the length of
+  the message.
+- If the length is odd, reverse the message and send it to the client. If the
+  length is even, just send the length to the client.
+- Repeat the same until the client sends a stop message to the server.

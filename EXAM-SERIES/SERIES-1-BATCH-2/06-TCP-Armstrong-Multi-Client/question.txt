@@ -1,0 +1,9 @@
+Implement a multi-client chat server program using TCP with the following
+functionality:
+
+- Client 1 sends an integer to the server.
+- The server checks whether the number is an Armstrong number or not.
+- If the number is an Armstrong number, the server sends the message
+  "Armstrong" to Client 2.
+- If the number is not an Armstrong number, the server sends the message
+  "Not Armstrong" to Client 1.

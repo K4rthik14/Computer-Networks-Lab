@@ -1,0 +1,8 @@
+Implement a simple FTP client-server program.
+
+- A client sends a file name to the server. If the file exists, the server
+  sends an "ok" message; otherwise it sends "failed to open".
+- The server opens the file and counts the number of vowels in the content.
+- If the count is a prime number, the server writes the current date and time
+  to a new file named "date.txt". The client opens and displays the file
+  content. If the count is not prime, the server sends "sorry" to the client.

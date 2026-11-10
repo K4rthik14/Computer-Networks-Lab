@@ -1,0 +1,10 @@
+Implement a UDP client-server program with the following functionality:
+
+- The client reads a set of numbers and sends them to the server using UDP.
+- The server receives the numbers, sorts them in ascending order, and displays
+  the sorted numbers.
+- The server identifies the second-largest number from the set and sends it
+  back to the client.
+- The client receives the second-largest number and checks whether it is a
+  palindrome or not.
+- The client displays the appropriate result based on the palindrome check.

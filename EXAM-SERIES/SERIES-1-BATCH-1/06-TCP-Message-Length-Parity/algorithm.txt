@@ -1,0 +1,32 @@
+Algorithm
+Server-side algorithm
+1. Start.
+2. Create a TCP socket.
+3. Configure the server address.
+4. Bind the socket.
+5. Listen for client connections.
+6. Accept the client connection.
+7. Receive the message using recv().
+8. Add null terminator to the received message.
+9. Initialize count = 0.
+10. Traverse the string character by character until '\0'.
+11. Increment count for each character.
+12. Check whether count % 2 == 0.
+13. If true, send "even" to the client.
+14. Otherwise, send "odd" to the client.
+15. Close the sockets.
+16. Stop.
+Client-side algorithm
+1. Start.
+2. Create a TCP socket.
+3. Configure the server address.
+4. Connect to the server.
+5. Read a message from the user.
+6. Send the message to the server.
+7. Receive the server's response.
+8. If the response is "odd":
+   - Traverse the original message character by character.
+   - Replace every 'a' with 'b'.
+9. Display the final message.
+10. Close the socket.
+11. Stop.

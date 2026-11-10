@@ -1,0 +1,9 @@
+Implement an FTP client-server program with the following functionality:
+
+- The client reads a set of numbers from a file and sends them to the server.
+- The server receives the numbers, sorts them in ascending order, and writes
+  them to a new file named "sort.txt".
+- The server identifies the second-largest number from the set and writes it
+  to "second.txt".
+- The server sends both file names to the client.
+- The client opens the files and displays their contents.

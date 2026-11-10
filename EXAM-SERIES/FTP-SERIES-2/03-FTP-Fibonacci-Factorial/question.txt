@@ -1,0 +1,9 @@
+Implement a simple FTP client-server program.
+
+- A client reads a message from a file and sends it to the server; the server
+  replies by writing to the same file.
+- The client writes the Fibonacci series to the file if the length of the
+  replied message is odd.
+- The client writes the factorial to the file if the length of the replied
+  message is even.
+- Repeat the same until the client sends an "exit" message to the server.

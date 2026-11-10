@@ -1,0 +1,51 @@
+2. Algorithm
+Server-side algorithm
+1. Start.
+2. Create a TCP socket using socket().
+3. Configure the server address and port number.
+4. Bind the socket using bind().
+5. Listen for incoming connections using listen().
+6. Accept the first client connection (Client 1) using accept().
+7. Accept the second client connection (Client 2) using accept().
+8. Receive the number from Client 1 using recv().
+9. Convert the received string into an integer using atoi().
+10. Initialize sum = 0.
+11. Calculate the sum of digits:
+    - Extract the last digit using % 10.
+    - Add it to sum.
+    - Remove the last digit using / 10.
+    - Repeat until the number becomes zero.
+12. Convert the sum into a string.
+13. Send the sum to Client 2 using send().
+14. Receive the prime-checking result from Client 2 using recv().
+15. Display the result.
+16. Close both client sockets and the server socket.
+17. Stop.
+
+
+Client 1 algorithm
+1. Start.
+2. Create a TCP socket.
+3. Configure the server address.
+4. Connect to the server using connect().
+5. Read an integer from the user.
+6. Convert the integer into a string using snprintf().
+7. Send the number to the server using send().
+8. Close the socket.
+9. Stop.
+
+
+Client 2 algorithm
+1. Start.
+2. Create a TCP socket.
+3. Configure the server address.
+4. Connect to the server using connect().
+5. Receive the digit sum from the server using recv().
+6. Convert the received string into an integer using atoi().
+7. Check whether the number is prime:
+   - If divisible by any integer from 2 to its square root, it is not prime.
+   - Otherwise, it is prime (provided it is greater than 1).
+8. Store "prime" or "not prime" in a string.
+9. Send the result to the server using send().
+10. Close the socket.
+11. Stop.

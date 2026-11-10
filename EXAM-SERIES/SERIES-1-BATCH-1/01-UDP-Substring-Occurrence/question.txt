@@ -1,0 +1,9 @@
+Implement a simple UDP client-server program.
+
+- A client sends a message to the server.
+- The server finds the number of occurrences of a particular substring.
+  Example: the client sends "banana" and the server reads the substring "na";
+  the number of occurrences of "na" is 2.
+- The server sends a reply to the client k times, where k is the number of
+  occurrences of the substring. For k = 2, the replies are:
+  "na occurred 2 times", "na occurred 2 times".

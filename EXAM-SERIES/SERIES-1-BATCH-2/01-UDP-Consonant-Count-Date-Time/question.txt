@@ -1,0 +1,6 @@
+Implement a simple UDP client-server program.
+
+- A client sends a message to the server; the server counts the number of
+  consonants in the message.
+- If the count is a prime number, send the current date and time to the client.
+  Otherwise, send "sorry" to the client.

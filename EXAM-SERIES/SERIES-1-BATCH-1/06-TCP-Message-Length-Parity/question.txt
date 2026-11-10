@@ -1,0 +1,8 @@
+Implement a simple TCP client-server program.
+
+- A client sends a message to the server, and the server finds the length of
+  the message without using a built-in function.
+- If the length is odd, send an "odd" message to the client; otherwise send
+  "even".
+- On the client side, if the received message is "odd", replace all a's with
+  b's in the message.

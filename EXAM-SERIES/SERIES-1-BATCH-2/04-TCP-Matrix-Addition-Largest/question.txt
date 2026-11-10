@@ -1,0 +1,7 @@
+Implement a simple TCP client-server program with the following functionality:
+
+- The client sends two matrices to the server.
+- The server adds the two matrices and computes the resultant matrix.
+- The server identifies the largest element in the resultant matrix.
+- The server sends both the resultant matrix and the largest element back to
+  the client.

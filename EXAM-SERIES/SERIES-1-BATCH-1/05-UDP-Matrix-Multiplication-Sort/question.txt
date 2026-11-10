@@ -1,0 +1,6 @@
+Implement a UDP client-server program where the client reads two matrices and
+sends them to the server.
+
+- The server finds the product of the matrices.
+- The server sorts the resultant matrix elements and sends the result back to
+  the client.

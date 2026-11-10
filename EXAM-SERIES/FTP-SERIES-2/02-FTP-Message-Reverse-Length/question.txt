@@ -1,0 +1,7 @@
+Implement a simple FTP client-server program.
+
+- A client opens a file, reads the content, and sends it to the server; the
+  server finds the length of the received message.
+- If the length is odd, reverse the message and write it to a file named
+  "new_file.txt". If the length is even, just write the length to the file.
+- Repeat the same until the client sends a stop message to the server.
